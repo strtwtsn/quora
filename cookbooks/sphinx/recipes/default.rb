@@ -1,12 +1,11 @@
-remote_file "/usr/local/src/sphinx.deb
-source "http://sphinxsearch.com/files/sphinxsearch_2.0.6-release-0ubuntu11~lucid_i386.deb"
-end
+package "python-software-properties"
 
-bash "Install Sphinx" do
+bash "Add sphinx repo and install" do
 user "root"
-cwd "/usr/local/src"
 code <<-EOH
-dpkg -i /usr/local/src/sphinx.deb
+add-apt-repository ppa:builds/sphinxsearch-stable
+apt-get update
+apt-get install sphinxsearch
 EOH
 end
 

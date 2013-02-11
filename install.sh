@@ -10,5 +10,5 @@ make
 make install
 rm /usr/local/src/ruby-1.9.3-p194.tar.gz
 gem install chef ruby-shadow --no-ri --no-rdoc
-# sudo git clone https://github.com/strtwtsn/WCMC_Cookbooks.git
-sudo chef-solo -c /var/chef/config/chefsolo.rb -j /var/chef/roles/role.json
+sudo git clone https://github.com/strtwtsn/quora.git
+sudo chef-solo -c /var/chef/config/chefsolo.rb -j /var/chef/roles/quora.json

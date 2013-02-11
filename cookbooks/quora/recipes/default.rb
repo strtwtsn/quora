@@ -2,7 +2,6 @@ gem_package "bundle" do
 action :install
 end
 
-
 bash "Download quora" do
 user "root"
 cwd "/usr/local/src"
